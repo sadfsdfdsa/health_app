@@ -49,12 +49,15 @@
             <a href="index.html">Home</a>
           </li>
           <li>
-            <!-- todo add login href -->
+
             <a href="#reg">Registration</a>
           </li>
           <li>
             <a href="#app">App</a>
           </li>
+          <!-- todo add login href -->
+<!-- _______________________________________________________________________________________________________________ -->
+          <sec:authorize access="isAnonymous()">
           <li>
             <input value="login">
           </li>
@@ -66,6 +69,16 @@
               <a href="#asd">Login</a>
             </div>
           </li>
+
+          </sec:authorize>
+          <sec:authorize access="isAnonymous()">
+          <li>
+            <div class="view-buttn2">
+              <a href="#asd">Logout</a>
+            </div>
+          </li>
+          </sec:authorize>
+<!-- _______________________________________________________________________________________________________________ -->
         </ul>
       </nav>
       <!-- //nav -->
