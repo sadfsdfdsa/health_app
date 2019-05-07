@@ -487,7 +487,7 @@ font-family: 'Patrick Hand', cursive;
     padding: 8px 15px;
     border: 2px solid #989898;
 }
-.view-buttn2 a {
+.view-buttn2 a, button {
     font-size: 15px;
     color: #ffffff;
     text-decoration: none;
