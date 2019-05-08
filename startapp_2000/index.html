@@ -56,26 +56,15 @@
           </li>
           <!-- todo add login href -->
 <!-- _______________________________________________________________________________________________________________ -->
-          <sec:authorize access="isAnonymous()">
-            <li>
-                  <form id="login_form" action="spring_security_check" method="post">
-                      <input type="text" placeholder="Email" name="username">
-                      <input type="password" placeholder="Password" name="password">
-                      <div class="view-buttn2">
-                          <button class="submit">Login</button>
-                      </div>
-                  </form>
-            </li>
-           </sec:authorize>
-           <sec:authorize access="isAnonymous()">
-              <li>
-                <div class="view-buttn2">
-                    <form action="logout" method="post">
-                        <button class="submit">Logout</button>
-                    </form>
-                </div>
-              </li>
-           </sec:authorize>
+          <li>
+            <form:form id="login_form" action="spring_security_check" method="post" class="form-inline">
+              <input type="text" placeholder="Email" name="username">
+              <input type="password" placeholder="Password" name="password">
+              <div class="view-buttn2">
+              <button class="submit">Login</button>
+            </div>
+            </form:form>
+          </li>
 <!-- _______________________________________________________________________________________________________________ -->
         </ul>
       </nav>
@@ -89,7 +78,9 @@
           <h5 class="mb-sm-3 mb-2">Health App</h5>
         </div>
         <div class="slide-info-txt">
-          <p>Beautiful tagline</p>
+          <p>Beautiful tagline</p><br><br>
+          <div class="view-buttn3"> <button type="submit" onclick="login('user@yandex.ru', 'password')">
+            <spring:message code="app.login"/> Try it now!</button></div>
         </div>
       </div>
     </div>
@@ -123,6 +114,7 @@
     <div class="container py-lg-5 py-md-4 py-sm-4 py-3">
       <div class="row">
         <div class="col-lg-7 store-details">
+          <br>
           <h4 class="mb-3">Download app</h4>
           <h6 class="mb-2">Only for Google Play available!</h6>
           <p>Text for our app</p>
@@ -130,7 +122,6 @@
             <a href="https://play.google.com/store?hl=en_US" id="app">Download</a>
           </div>
         </div>
-
         <div class="col-lg-5 store-image-right">
           <img src="images/googleplay.png" alt="" class="img-fluid">
         </div>
